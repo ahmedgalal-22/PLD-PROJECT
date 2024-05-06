@@ -1,0 +1,86 @@
+"Start Symbol" = start_symbol
+
+!...........TERMINAL..........
+Id= [_]{letter}{Alphanumeric}*
+Digit= ('+'|'-'){digit}+ ('.'{digit}+)? ('e'|('-'|'+'){digit}+ '^' ('+'|'-'){digit}+('.'{letter}+)?)?
+
+!............Rule............
+<start_symbol> ::= 'StartSymbol' <statement_list> 'EndSymbol'
+
+<statement_list> ::= <statement> 
+                  | <statement>  <statement_list>
+
+<statement> ::= <assignment>
+             | <if_statement> 
+             | <for_statement>
+             | <function_definition>
+             | <function_call>
+<decl>::=<datatype><identifier>
+       |<datatype><assignment>
+
+<assignment> ::= <identifier> '=' <expression> ';'
+
+<identifier> ::= Id
+
+<expression> ::=  <term_expression> '+' <expression> 
+                 | <term_expression> '-' <expression>
+                 |<term_expression> 
+
+<term_expression> ::= <factor_expression> '*' <term_expression> 
+                   | <factor_expression> '/' <term_expression> 
+                   | <factor_expression> '%' <term_expression>
+                   | <factor_expression> 
+                    
+
+<factor_expression> ::= <parenthesized_expression> '' <factor_expression>
+                     | <parenthesized_expression> 
+                      
+
+<parenthesized_expression> ::= '(' <expression> ')' 
+                             | <identifier> 
+                             | <numeric_digit>
+
+<numeric_digit> ::= Digit
+
+<if_statement> ::= if '(' <condition> ')' '{' <statement_list> '}' 
+                 | if '(' <condition> ')' '{' <statement_list> '}' else '{' <statement_list> '}' 
+                 | if '(' <condition> ')' '{' <statement_list> '}' else if '(' <condition> ')' '{' <statement_list> '}'
+                 | if '(' <condition> ')' '{' <statement_list> '}' else if '(' <condition> ')' '{' <statement_list> '}' else '{' <statement_list> '}'
+
+
+<condition> ::= <expression> <operator> <expression>
+
+<operator> ::= '!=' 
+            | '==' 
+            | '<' 
+            | '>'
+
+<for_statement> ::= For '(' <datatype><assignment> ';' <condition> ';' <increment_decrement> ')' '{' <statement_list> '}'
+
+<datatype> ::= int 
+            | float 
+            | double 
+            | string
+
+<increment_decrement> ::= '--' <identifier> 
+                        | '++' <identifier> 
+                        | <identifier> '--'
+                        | <identifier> '++'
+                        | <assignment>
+
+
+<function_definition> ::= Function <identifier> '(' <parameters> ')' '{' <statement_list> '}'
+
+<parameters> ::= <parameter> 
+              | <parameter> ',' <parameters>
+
+<parameter> ::= <identifier>
+
+<function_call> ::= Call <identifier> '(' <arguments> ')' ';'
+
+<arguments> ::= <argument> 
+             | <argument> ',' <arguments>
+
+<argument> ::= <expression>
+            
+

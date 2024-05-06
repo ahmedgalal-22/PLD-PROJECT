@@ -1,0 +1,13 @@
+D:\CIS\3\2\pld\v\proj1\proj1\bin\Debug\proj1.exe.config
+D:\CIS\3\2\pld\v\proj1\proj1\bin\Debug\proj1.exe
+D:\CIS\3\2\pld\v\proj1\proj1\bin\Debug\proj1.pdb
+D:\CIS\3\2\pld\v\proj1\proj1\bin\Debug\CalithaLib.dll
+D:\CIS\3\2\pld\v\proj1\proj1\bin\Debug\GoldParserEngine.dll
+D:\CIS\3\2\pld\v\proj1\proj1\obj\Debug\proj1.csproj.AssemblyReference.cache
+D:\CIS\3\2\pld\v\proj1\proj1\obj\Debug\proj1.Form1.resources
+D:\CIS\3\2\pld\v\proj1\proj1\obj\Debug\proj1.Properties.Resources.resources
+D:\CIS\3\2\pld\v\proj1\proj1\obj\Debug\proj1.csproj.GenerateResource.cache
+D:\CIS\3\2\pld\v\proj1\proj1\obj\Debug\proj1.csproj.CoreCompileInputs.cache
+D:\CIS\3\2\pld\v\proj1\proj1\obj\Debug\proj1.csproj.CopyComplete
+D:\CIS\3\2\pld\v\proj1\proj1\obj\Debug\proj1.exe
+D:\CIS\3\2\pld\v\proj1\proj1\obj\Debug\proj1.pdb
